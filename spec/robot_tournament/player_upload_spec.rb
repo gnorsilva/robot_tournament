@@ -60,8 +60,8 @@ describe PlayerUpload do
           subject.unpack
         end
 
-        Dir.entries(working_dir).should == ['.', '..', 'test_player']
-        Dir.entries(working_dir + '/test_player').should == ['.', '..', 'move']
+        Dir.entries(working_dir).should =~ ['.', '..', 'test_player']
+        Dir.entries(working_dir + '/test_player').should =~ ['.', '..', 'move']
       end
     
       it "replaces any existing upload" do
